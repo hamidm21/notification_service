@@ -7,7 +7,9 @@ const controller = require('../lib/controllers/email_controller');
 
 // router.post('/toPsychologist', controller.toPsychologist);
 
-router.post('/toClient', controller.sendEmailToClient);
+router.post('/contactUs', controller.contactUs);
+
+router.post('/opinionPsychologist', controller.opinionPsychologist);
 
 
 module.exports = router;
