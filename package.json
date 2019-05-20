@@ -7,7 +7,7 @@
     "test": "jest --verbose",
     "start": "node ./bin/www.js",
     "eslint": "./node_modules/.bin/eslint",
-    "debug": "DEBUG=goftare:* node ./bin/www.js"
+    "debug": "DEBUG=notify:* node ./bin/www.js"
   },
   "author": "Hamid <hamidmk2121@gmail.com>",
   "license": "ISC",
@@ -26,6 +26,7 @@
     "morgan": "^1.9.1",
     "nodemailer": "^5.1.1",
     "request": "^2.88.0",
+    "request-promise": "^4.2.4",
     "winston": "^3.2.0"
   },
   "devDependencies": {

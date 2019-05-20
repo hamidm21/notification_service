@@ -6,8 +6,9 @@
 
 
 var app = require('../notification_service');
-var debug = require('debug')('goftare:HTTP');
+var debug = require('debug')('notify:HTTP');
 var http = require('http');
+const {kafkaInit} = require('../lib/handlers/kafka_handler');
 require('dotenv').config();
 const config = require('../lib/config/config');
 const pid = process.pid;
@@ -34,6 +35,9 @@ server.listen(port , () => {
 server.on('error', onError);
 server.on('listening', onListening);
 debug(`server is running on port ${config.PORT}`);
+
+// initializing kafka
+kafkaInit();
 
 /**
  * Normalize a port into a number, string, or false.
