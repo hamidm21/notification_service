@@ -9,6 +9,7 @@ var app = require('../notification_service');
 var debug = require('debug')('notify:HTTP');
 var http = require('http');
 const {kafkaInit} = require('../lib/handlers/kafka_handler');
+require('../lib/handlers/kafka_handler');
 require('dotenv').config();
 const config = require('../lib/config/config');
 const pid = process.pid;
